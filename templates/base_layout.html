@@ -1,0 +1,27 @@
+{% load static from staticfiles %}
+
+<!-- add bootstrap + taki sam kolor navbar co tlo  z odniesieniem do strony glownej i footera-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My articles</title>
+
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
+            <link rel="stylesheet" type="text/css" href="{% static 'template-styles.css' %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'all.min.css' %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'tooplate-style.css' %}">
+            <link rel="stylesheet" type="text/css" href="{% static 'lightbox.min.css' %}">
+
+    </head>
+
+    <body class="tm-bg-dark">
+        <div class="wrapper">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+        <script type="text/javascript" src="{{STATIC_URL}}/static/lightbox-plus-jquery.min.js"></script>
+
+    </body>
+</html>
