@@ -7,26 +7,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Character Responsive HTML5 Template</title>
-<!--
-Template 2110 Character
-http://www.tooplate.com/view/2110-character
--->
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,600">
-    <!-- https://fonts.google.com/specimen/Open+Sans -->
     <link rel="stylesheet" href="{% static 'all.min.css' %}">
-    <!-- https://fontawesome.com/ -->
     <link rel="stylesheet" href="{% static 'tooplate-style.css' %}">
 </head>
 
 <body class="tm-bg-dark">
     <main class="tm-container masonry">
         <div class="item tm-bg-white tm-block tm-block-left" data-desktop-seq-no="1" data-mobile-seq-no="1">
-            <p class="tm-hero-text">&ldquo;Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos
-                himenaeos. Maecenas vel lacinia ipsum, nec fermentum diam. Nulla nec gravida odio, eget vestibulum urna.&rdquo;</p>
+            <p class="tm-hero-text">&ldquo;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                laboris nisi ut aliquip ex ea commodo consequat.&rdquo;</p>
             <header class="tm-block-brand">
                 <div class="tm-bg-primary-dark tm-text-white tm-block-brand-inner">
                     <i class="fas fa-braille fa-3x"></i>
-                    <h1 class="tm-brand-name">Character</h1>
+                    <h1 class="tm-brand-name">About me</h1>
                 </div>
             </header>
         </div>
@@ -60,7 +56,7 @@ http://www.tooplate.com/view/2110-character
                     ex sollicitudin, commodo liqula suscipit, laoreet lacus. Nulla ac erat at quam mollis lacinia nec sed
                     erat.
                 </p>
-                <!-- -->
+
             </div>
         </div>
 
@@ -71,7 +67,7 @@ http://www.tooplate.com/view/2110-character
         <div class="item tm-bg-white tm-block tm-form-section" data-desktop-seq-no="9" data-mobile-seq-no="7">
             <div class="tm-form-container tm-block-pad tm-pb-0">
 
-                <p>COS DODAMY></p>
+                <p> </p>
 
             </div>
 
@@ -89,7 +85,7 @@ http://www.tooplate.com/view/2110-character
     </main>
     <script type="text/javascript" src="{{STATIC_URL}}/static/jquery-3.3.1.min.js">
     </script>
-    <!-- https://jquery.com/download/ -->
+
     <script>
 
         let callAdjustLayout;
@@ -105,20 +101,19 @@ http://www.tooplate.com/view/2110-character
 
             var msie = ua.indexOf('MSIE ');
             if (msie > 0) {
-                // IE 10 or older => return version number
                 return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
             }
 
             var trident = ua.indexOf('Trident/');
             if (trident > 0) {
-                // IE 11 => return version number
+
                 var rv = ua.indexOf('rv:');
                 return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
             }
 
             var edge = ua.indexOf('Edge/');
             if (edge > 0) {
-                // Edge (IE 12+) => return version number
+
                 return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
             }
 
@@ -126,7 +121,6 @@ http://www.tooplate.com/view/2110-character
             return false;
         }
 
-        // Adjust layout based on the browser width
         function adjustLayout() {
             let block1, block2, block3, block4, block5, block6, block7, block8, block9;
 
@@ -170,13 +164,12 @@ http://www.tooplate.com/view/2110-character
             }
         }
 
-        // Adjust layout upon window resize
         window.onresize = function () {
             clearTimeout(callAdjustLayout);
             callAdjustLayout = setTimeout(adjustLayout, 100);
         }
 
-        // DOM is ready
+
         $(function () {
             if (detectIE()) {
                 alert('Please use the latest version of Chrome or Firefox for best browsing experience.');
