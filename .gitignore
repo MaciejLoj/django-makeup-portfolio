@@ -4,6 +4,10 @@
 .LSOverride
 .idea/
 
+# Ignore secret locations
+secret/
+secret.py
+
 # Icon must end with two \r
 Icon
 
